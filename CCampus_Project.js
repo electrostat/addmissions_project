@@ -8,16 +8,32 @@ function didThisWork(){
 
 function returnTextInput () {
   var userInput = document.getElementById("textInput").value;
-    document.write(userInput);
+    // document.write(userInput);
+	
+	//convert string to number
+	var n = Number(userInput);
+	
+	var output = "";
+	
+	//html newline character is <br>
+	var phrases = "Hello! Bonjour! Hola! Gutentag! Ni Hao! Shalom <br>"
+	
+	//run loop number of times
+	for(i = 0; i < n; i++){
+		output = output.concat(phrases);
+	}
+	
+	//change this element
+	document.getElementById('demo').innerHTML = output;
     
-    console.log("conection functions");
-    console.log(userInput);
+    // console.log("conection functions 1");
+    // console.log(userInput);
 };
 
 
     function keepStylin () {
 
-        console.log("connection functions");
+        console.log("connection functions 2");
     };
 
 //window.onload = function addMe(){ 
